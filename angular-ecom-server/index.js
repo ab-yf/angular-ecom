@@ -34,7 +34,15 @@ app.get ('/', (req, res) => {
         if (err) {
         res.status(500).send(err);
         } else {
-        res.status(200).send('Connection Established');
+        pool.query('select * from categories', (error, categories) => {
+            if (error) {
+                res.status(500).send(error);
+            }else {
+                //We want to send the categories to our client.
+                res.status(200).send(categories);
+            }
+        });
+        // res.status(200).send('Connection Established');
         }
     });
 });
