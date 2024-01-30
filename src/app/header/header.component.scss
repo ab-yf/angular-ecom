@@ -1,3 +1,11 @@
+
+// Adding these so that we can avoid repition of style code
+// There are classes which are being styled same lines of code, we are trying to remove that.
+$search-bar-background-color: #dadada;
+$search-bar-height: 2.5em;
+$search-bar-border: none;
+
+
 // Over here, we are styling our hedaer
 .header {
     max-width: 100%;
@@ -14,16 +22,26 @@
 
 // Over here, we are styling our search box.
 .search-box {
-    width: 90%;
-    height: 2.5em;
+    width: 75%;
+    height: $search-bar-height;
     display: inline-block;
-    border: none;
+    border: $search-bar-border;
 }
 
 // Over here, we are styling our search button.
 .search-button {
     width: 10%;
-    height: 2.5em;
-    border: none;
-    background-color: #dadada;
+    height: $search-bar-height;
+    border: $search-bar-border;
+    background-color: $search-bar-background-color;
+}
+
+// Over here, we are styling our dropdown menu.
+.dropdown {
+    text-align: center;
+    width: 15%;
+    height: $search-bar-height;
+    border: $search-bar-border;
+    background-color: $search-bar-background-color;
+    font-weight: 600;
 }
