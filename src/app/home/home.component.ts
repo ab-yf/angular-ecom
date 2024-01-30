@@ -5,13 +5,13 @@ import { SidenavigationComponent } from './components/sidenavigation/sidenavigat
 import { ProductsComponent } from './components/products/products.component';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { RatingComponent } from '../shared/components/rating/rating.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-homehome',
   standalone: true,
-  imports: [HeaderComponent, CategorynavComponent, SidenavigationComponent, ProductsComponent, RatingComponent, SharedModule, CommonModule, FontAwesomeModule],
+  imports: [HeaderComponent, CategorynavComponent, SidenavigationComponent, ProductsComponent, SharedModule, HttpClientModule, CommonModule, FontAwesomeModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

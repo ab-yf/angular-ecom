@@ -3,7 +3,6 @@ import { ProductsService } from './products.service';
 import { ProductListItem } from './products.type';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../../shared/shared.module';
-
 @Component({
   selector: 'app-products',
   standalone: true,

@@ -16,4 +16,3 @@ export class CategoryService {
     return categories
   }
 }
-
