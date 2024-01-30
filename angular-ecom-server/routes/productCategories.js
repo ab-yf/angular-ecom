@@ -1,6 +1,7 @@
 // Importing Express
 const express = require ('express');
-const productCategories = express();
+// Addedd Express.Router as it is better for handling routes.
+const productCategories = express.Router();
 const mysql = require ('mysql2');
 
 // mysql.createPool() method takes an object as paramter with database information to establish the connection.
