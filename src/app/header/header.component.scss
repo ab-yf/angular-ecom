@@ -68,3 +68,17 @@ $search-bar-border: none;
         font-size: 1.3em;
     }
 }
+
+.cart-wishlist {
+    width: 8%;
+    margin-top: 1.7em;
+    margin-left: 1em;
+
+    .list-item {
+        color: white;
+        list-style-type: none;
+        display: inline-block;
+        font-size: 1.3em;
+        margin-right: 0.5em;
+    }
+}
