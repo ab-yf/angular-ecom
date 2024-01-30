@@ -45,3 +45,26 @@ $search-bar-border: none;
     background-color: $search-bar-background-color;
     font-weight: 600;
 }
+
+// Overe here, we are stying our Login and Register container
+.login-container {
+    color: white;
+    display: inline-block;
+    width: 15%;
+    text-align: right;
+    margin: 1.7em 0.2em 0 0;
+
+    h5 {
+        display: inline-block;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .user-icon {
+        margin-right: 0.4em;
+        padding: 0.2em;
+        font-size: 1.3em;
+    }
+}
