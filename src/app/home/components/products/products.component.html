@@ -1,23 +1,25 @@
-
 <!-- This is where we are adding products to our eStore -->
 
 <!-- This is our main product container -->
 <div class="main-product-container">
-
-    <!-- Product Card Class -->
-    <div *ngFor="let product of products"class="mx-5 p-3 product-card">
-      <div class="product-image-container">
-        <img [src]="'../../../../assets/images/' + product.product_img + '.jpg'"/>
-      </div>
-      <!-- Product Info Class -->
-      <div class="product-info">
-        <!-- We have replaced manual names with products.'' as we have created a service for fetching our products  -->
-        <h5><a href="#">{{product.product_name}}</a></h5>
-        <!-- Product Price Class -->
-        <!-- We have replaced manual names with products.'' as we have created a service for fetching our products  -->
-        <p class="product-price">{{product.price | currency}}</p>
-      </div>
+  <!-- Product Card Class -->
+  <div *ngFor="let product of products" class="mx-5 p-3 product-card">
+    <div class="product-image-container">
+      <img
+        [src]="'../../../../assets/images/' + product.product_img + '.jpg'"
+      />
     </div>
+    <!-- Product Info Class -->
+    <div class="product-info">
+      <!-- We have replaced manual names with products.'' as we have created a service for fetching our products  -->
+      <h5>
+        <a href="#">{{ product.product_name }}</a>
+      </h5>
+      <!-- Product Price Class -->
+      <!-- We have replaced manual names with products.'' as we have created a service for fetching our products  -->
+      <p class="product-price">{{ product.price | currency }}</p>
+      <!-- We have also added Product Ratings from our shared module -->
+      <p><app-rating [score]="product.ratings"></app-rating></p>
+    </div>
+  </div>
 </div>
-  
-  
