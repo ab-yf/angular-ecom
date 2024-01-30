@@ -11,3 +11,19 @@
     padding: 0.8em;
     width: 23%;
 }
+
+// Over here, we are styling our search box.
+.search-box {
+    width: 90%;
+    height: 2.5em;
+    display: inline-block;
+    border: none;
+}
+
+// Over here, we are styling our search button.
+.search-button {
+    width: 10%;
+    height: 2.5em;
+    border: none;
+    background-color: #dadada;
+}
