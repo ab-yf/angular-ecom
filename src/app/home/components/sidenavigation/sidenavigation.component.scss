@@ -32,7 +32,7 @@
                 text-decoration: none;
                 color: black;
                 // Adding our underline transition effect from our root style.css mixin
-                @include underline-transition(0.3)
+                @include underline-transition(0.5)
             }
         }
     }
