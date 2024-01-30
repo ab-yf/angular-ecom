@@ -1,4 +1,8 @@
 
+// Importing our mixin underline style transition from root style.scss
+@import "../../../../styles.scss";
+
+
 // Contains styling for our container including our various categories
 .navigation-container {
     max-width: 100%;
@@ -20,24 +24,29 @@
         font-size: 0.9em;
         font-weight: 700;
 
+        // We have imported our underline transition directly here, see below for more details
+        @include underline-transition(1.1);
+
         // After hovering on the category navigation, we are adding a red transtion
         // The red transtion comes when we hover and smoothly goes after curson is taken away.
-        &::after {
-            content: '';
-            display: block;
-            bottom: 0;
-            left: 0;
-            height: 0.2em;
-            background-color: red;
-            transform: scaleX(0);
-            transition-property: transform;
-            transition-duration: 0.2s;
-        }
 
-        &:hover {
-            &::after{
-                transform: scaleX(1.2);
-            }
-        }
+        // Has been commented out as it has been transported to out main styles.scss and is taken from there via mixin
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     bottom: 0;
+        //     left: 0;
+        //     height: 0.2em;
+        //     background-color: red;
+        //     transform: scaleX(0);
+        //     transition-property: transform;
+        //     transition-duration: 0.2s;
+        // }
+
+        // &:hover {
+        //     &::after{
+        //         transform: scaleX(1.2);
+        //     }
+        // }
     }
 }

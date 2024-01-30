@@ -1,0 +1,40 @@
+
+// Import mixin from our main styles.css root so that we can use our underline transtion
+@import "../../../../styles.scss";
+
+// Stying our side navigation bar
+
+.side-navigation {
+    margin-top: 1em;
+    padding: 0.6em;
+    box-shadow: 1px 0px 14px 0px lightgray;
+    height: 97%;
+    border-radius: 1em;
+
+    .section-title {
+        padding: 1em;
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .individual-category {
+        ul {
+            padding: 0;
+        }
+
+        .sub-items {
+            text-align: center;
+            margin-bottom: 0.6em;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+                // Adding our underline transition effect from our root style.css mixin
+                @include underline-transition(0.3)
+            }
+        }
+    }
+    
+}
