@@ -8,8 +8,10 @@ import { HomehomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
-import { CategoryService } from './services/category.service';
-import { CategoriesStoreItem } from './services/categories.storeItem';
+import { CategoryService } from './services/category/category.service';
+import { CategoriesStoreItem } from './services/category/categories.storeItem';
+import { ProductsStoreItem } from './services/product/products.storeItem';
+import { ProductsService } from './services/product/products.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { CategoriesStoreItem } from './services/categories.storeItem';
     CommonModule, SharedModule, FontAwesomeModule, HttpClientModule,
   ],
   providers: [
-    CategoryService, CategoriesStoreItem,
+    CategoryService, CategoriesStoreItem, ProductsService, ProductsStoreItem,
   ],
 })
 export class HomeModule { }

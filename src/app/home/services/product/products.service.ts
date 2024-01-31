@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Product } from './products.type';
+import { Product } from '../../types/products.type';
 import { HttpClient } from '@angular/common/http';
 
 // We have removed inRoot property because this service will only be used in the Product Component

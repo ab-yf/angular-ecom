@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductsService } from './products.service';
-import { Product } from './products.type';
+import { ProductsStoreItem } from '../../services/product/products.storeItem';
 
 
 @Component({
@@ -9,7 +8,6 @@ import { Product } from './products.type';
   styleUrl: './products.component.scss',
   // The reason why we add providers as it indicates to the Angular compiler that 
   // the product service is a dependency of this component.
-  providers: [ProductsService]
 })
 
 // export class ProductsComponent {
@@ -21,11 +19,10 @@ import { Product } from './products.type';
 // }
 
 export class ProductsComponent {
-  products: Product[] = [];
 
-  constructor(productsService: ProductsService) {
-    productsService
-      .getAllProducts()
-      .subscribe((products) => (this.products = products));
+  constructor(public productsStore: ProductsStoreItem) {
+
   }
+
 }
+

@@ -6,9 +6,9 @@ const pool = require('../shared/pool');
 
 products.get('/', (req, res) => {
 
+  // Query Paramters to filer products by category.
   var mainCategoryId = req.query.maincategoryid;
   var subCategoryId = req.query.subcategoryid;
-
   let query = 'select * from products';
 
   // added fetching products from subcategory id
