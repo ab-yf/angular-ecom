@@ -2,7 +2,7 @@
 <!-- to a new module Home. App-header and app-category are now children of our parent Module Home-->
 
 <app-header></app-header>
-<app-categorynav></app-categorynav>
+<app-categorynav (categoryClicked)="onSelectCategory($event)"></app-categorynav>
 
 <!-- Added this divison in order to make our Sidebar towards the left and to make it compact  -->
 <div class="container-fluid">

@@ -9,6 +9,7 @@ products.get('/', (req, res) => {
   // Query Paramters to filer products by category.
   var mainCategoryId = req.query.maincategoryid;
   var subCategoryId = req.query.subcategoryid;
+  var keyword = req.query.keyword;
   let query = 'select * from products';
 
   // added fetching products from subcategory id
@@ -20,6 +21,10 @@ products.get('/', (req, res) => {
   if (mainCategoryId) {
     query = `select products.* from products, categories 
     where products.category_id = categories.id and categories.parent_category_id = ${mainCategoryId}`;
+  }
+
+  if (keyword) {
+    query += ` and keywords like '%${keyword}%'`;
   }
 
   pool.query(query, (error, products) => {
