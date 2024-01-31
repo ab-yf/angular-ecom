@@ -1,53 +1,53 @@
 
-// This class imports our Product template class and extends it by adding details to our products.
+// // This class imports our Product template class and extends it by adding details to our products.
 
-import { race } from 'rxjs';
-import { ProductListItem } from "./products.type";
+// import { race } from 'rxjs';
+// import { ProductListItem } from "./products.type";
 
 
-// Here, we have made our sample products and are exporting them
-export const products: ProductListItem[] = [
-  // Ratings have now also been added.
-    {
-      id: 1,
-      product_name: 'Jacket',
-      product_img: 'shop-1',
-      price: 100,
-      ratings: 4.5
-    },
-    {
-      id: 2,
-      product_name: 'Purse',
-      product_img: 'shop-2',
-      price: 25,
-      ratings: 3
-    },
-    {
-      id: 3,
-      product_name: 'Dress',
-      product_img: 'shop-3',
-      price: 45,
-      ratings: 4
-    },
-    {
-      id: 4,
-      product_name: 'Denim Jeans',
-      product_img: 'shop-4',
-      price: 50,
-      ratings: 3.5
-    },
-    {
-      id: 5,
-      product_name: 'Laced Boots',
-      product_img: 'shop-5',
-      price: 65,
-      ratings: 2
-    },
-    {
-      id: 6,
-      product_name: 'Back pack',
-      product_img: 'shop-6',
-      price: 20,
-      ratings: 5
-    }
-  ];
+// // Here, we have made our sample products and are exporting them
+// export const products: ProductListItem[] = [
+//   // Ratings have now also been added.
+//     {
+//       id: 1,
+//       product_name: 'Jacket',
+//       product_img: 'shop-1',
+//       price: 100,
+//       ratings: 4.5
+//     },
+//     {
+//       id: 2,
+//       product_name: 'Purse',
+//       product_img: 'shop-2',
+//       price: 25,
+//       ratings: 3
+//     },
+//     {
+//       id: 3,
+//       product_name: 'Dress',
+//       product_img: 'shop-3',
+//       price: 45,
+//       ratings: 4
+//     },
+//     {
+//       id: 4,
+//       product_name: 'Denim Jeans',
+//       product_img: 'shop-4',
+//       price: 50,
+//       ratings: 3.5
+//     },
+//     {
+//       id: 5,
+//       product_name: 'Laced Boots',
+//       product_img: 'shop-5',
+//       price: 65,
+//       ratings: 2
+//     },
+//     {
+//       id: 6,
+//       product_name: 'Back pack',
+//       product_img: 'shop-6',
+//       price: 20,
+//       ratings: 5
+//     }
+//   ];

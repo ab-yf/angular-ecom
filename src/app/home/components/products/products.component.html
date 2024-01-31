@@ -5,9 +5,7 @@
   <!-- Product Card Class -->
   <div *ngFor="let product of products" class="mx-5 p-3 product-card">
     <div class="product-image-container">
-      <img
-        [src]="'../../../../assets/images/' + product.product_img + '.jpg'"
-      />
+      <img [src]="'../../../../assets/images/' + product.product_img"/>
     </div>
     <!-- Product Info Class -->
     <div class="product-info">
