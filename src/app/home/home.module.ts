@@ -8,6 +8,8 @@ import { HomehomeComponent } from './home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
+import { CategoryService } from './services/category.service';
+import { CategoriesStoreItem } from './services/categories.storeItem';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,9 @@ import { ProductsComponent } from './components/products/products.component';
   ],
   imports: [
     CommonModule, SharedModule, FontAwesomeModule, HttpClientModule,
-  ]
+  ],
+  providers: [
+    CategoryService, CategoriesStoreItem,
+  ],
 })
 export class HomeModule { }
