@@ -9,7 +9,14 @@ export class ProductsService {
   constructor(private httpClient: HttpClient) {}
 
   // We are now fetching the products from our database rather than static data locally.
-  getAllProducts(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>('http://localhost:5001/products');
+  getAllProducts(query?: string): Observable<Product[]> {
+
+    // adding functionality to filter products by category
+    let url: string = 'http://localhost:5001/products';
+    if (query) {
+      url += '?' + query;
+    }
+    // If the query is supplied, we will conactenate to the URL and the return statement will palce the URL with the variable.
+    return this.httpClient.get<Product[]>(url);
   }
 }

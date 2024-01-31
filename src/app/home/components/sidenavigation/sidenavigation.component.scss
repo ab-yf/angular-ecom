@@ -31,6 +31,7 @@
             a {
                 text-decoration: none;
                 color: black;
+                cursor: pointer;
                 // Adding our underline transition effect from our root style.css mixin
                 @include underline-transition(0.5)
             }

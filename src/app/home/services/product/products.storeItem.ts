@@ -11,8 +11,8 @@ export class ProductsStoreItem extends StoreItem<Product[]> {
   }
 
 //  suscribe to getAllProducts method which will return all products
-  async loadProducts() {
-    this.productsService.getAllProducts().subscribe((products) => {
+  async loadProducts(query?: string) {
+    this.productsService.getAllProducts(query).subscribe((products) => {
       this.setValue(products);
     });
   }

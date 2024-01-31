@@ -15,4 +15,9 @@ export class HomehomeComponent {
     this.categoriesStoreItem.loadCategories();
     this.productsStoreItem.loadProducts();
   }
+
+  // Filter results by category
+  onSelectSubCategory(subCategoryId: number): void {
+    this.productsStoreItem.loadProducts('subcategoryid= ' + subCategoryId);
+  }
 }

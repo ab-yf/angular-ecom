@@ -29,7 +29,7 @@
             <ul>
               <!-- We have replaed individual items with our ngFor directive for iteration of our category items -->
               <li *ngFor='let subCategory of getCategories (mainCategory.id)' class="sub-items">
-                <a href="#">{{subCategory.category}}</a>
+                <a (click)="onSubCategoryClick(subCategory)">{{subCategory.category}}</a>
               </li>
             </ul>
           </div>
