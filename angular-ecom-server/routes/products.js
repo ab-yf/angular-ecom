@@ -23,6 +23,7 @@ products.get('/', (req, res) => {
     where products.category_id = categories.id and categories.parent_category_id = ${mainCategoryId}`;
   }
 
+  // Keyword search for our products
   if (keyword) {
     query += ` and keywords like '%${keyword}%'`;
   }
